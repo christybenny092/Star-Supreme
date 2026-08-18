@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+   
+  <nav class="nav">
+
+    <button class="hamburger" id="hamburger" type="button" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-menu" id="navMenu">
+
+        <a href="./index.html" class="active">Home</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./gallery.html">Gallery</a>
+
+        <div class="dropdown">
+            <button class="dropbtn" type="button">
+                Products
+            </button>
+
+            <div class="dropdown-content">
+                <a href="./6 gutter.html">6 Gutter</a>
+                <a href="./9 gutter.html">9 Gutter</a>
+            </div>
+        </div>
+
+        <a href="./contact.html">Contact</a>
+
+    </div>
+
+</nav>
+
+<header>
+    <img src="./images/Picsart_26-07-21_16-54-11-199.png" alt="Logo" class="logo">
+</header>
+
+    <div class="container1">
+        <img src="./images/Star-Supreme_brochure-24-01.jpg">
+    </div>
+    <div class="container2">
+        <h3>Protect Your Home</h3>
+        <h2>Experience the Best Class UPVC<br>Rain Water Gutter System</h2>
+    </div>
+    <div class="container3">
+        <p>High qulaity, durable and seamless gutter systems<br>designed to protect your home from water<br>damage all year round</p>
+    </div>
+    <div class="buttons">
+        <button class="btn-primary">Get Free Quote</button>
+        <button class="btn-secondary">Our Products</button>
+    </div>
+    <section class="features">
+    <div class="feature-card">
+
+        <div class="feature-box">
+
+            <div class="icon">
+               
+            </div>
+
+            <div class="content">
+                <h3>Leak Protection</h3>
+                <p>100% leak-proof systems for complete protection</p>
+            </div>
+
+        </div>
+
+        <div class="feature-box">
+
+            <div class="icon">
+               
+            </div>
+            <div class="content">
+                <h3>Premium Quality</h3>
+                <p>High-grade materials built to last long</p>
+            </div>
+        </div>
+
+        <div class="feature-box">
+            <div class="icon">
+            </div>
+            <div class="content">
+                <h3>Professional Installation</h3>
+                <p>Expert team ensuring perfect installation</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <div class="icon">
+            </div>
+            <div class="content">
+                <h3>All Weather Performance</h3>,
+                <p>Designed to perform in every season</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get In Touch Section -->
+<section class="contact-section">
+    <div class="contact-container">
+
+        <div class="contact-left">
+            <h5>GET IN TOUCH</h5>
+            <h2>Need a Rain Water Gutter Solution?</h2>
+            <p>
+                Whether you're building a new home or replacing an old gutter
+                system, our experts are ready to help. Contact us today for a
+                free consultation and quotation.
+            </p>
+
+            <div class="contact-info">
+                <div class="info-box">
+                    <img src="images/phone-call.png" alt="">
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <img src="images/mail.png" alt="">
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@starsupreme.com</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <img src="images/location.png" alt="">
+                    <div>
+                        <h4>Address</h4>
+                        <p>Kothamangalam, Kerala, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+                <input type="tel" placeholder="Phone Number">
+
+                <textarea rows="6" placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</div>
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+const dropdown = document.querySelector(".dropdown");
+const dropbtn = document.querySelector(".dropbtn");
+
+/* ================================
+   HAMBURGER MENU
+================================ */
+
+hamburger.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
+
+
+/* ================================
+   PRODUCTS DROPDOWN
+================================ */
+
+dropbtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    dropdown.classList.toggle("active");
+});
+
+
+/* ================================
+   CLOSE DROPDOWN OUTSIDE
+================================ */
+
+document.addEventListener("click", function (e) {
+
+    if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove("active");
+    }
+
+});
+
+
+/* ================================
+   CLOSE MENU WHEN LINK IS CLICKED
+================================ */
+
+navMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("active");
+        dropdown.classList.remove("active");
+    });
+
+});
+</script>
+
+</body>
+<style>
+
+/* =========================================================
+   BASIC RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #1f2b38;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   HEADER / LOGO
+========================================================= */
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    z-index: 1000;
+}
+
+header img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    z-index: 2000;
+
+    display: flex;
+    align-items: center;
+}
+
+/* -------------------------
+   DESKTOP MENU
+------------------------- */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-menu > a,
+.dropbtn {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-menu > a:hover,
+.dropbtn:hover {
+    color: #2b7cff;
+}
+
+.nav-menu > a.active {
+    color: #2b7cff;
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+/* ================================
+   PRODUCTS DROPDOWN
+================================ */
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    padding: 0;
+    color: #ffffff;
+    background: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 170px;
+    min-width: 170px;
+
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+
+    color: #222222;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #eeeeee;
+    color: #2b7cff;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+}
+
+/* Desktop dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* =========================================================
+   HAMBURGER
+========================================================= */
+
+.hamburger {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 7px;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    z-index: 5000;
+}
+
+.hamburger span {
+    display: block;
+
+    width: 28px;
+    height: 3px;
+
+    background: #ffffff;
+
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .nav {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: auto;
+        display: flex;
+        align-items: flex-start;
+        z-index: 5000;
+    }
+
+
+    /* SHOW HAMBURGER */
+
+    .hamburger {
+        display: flex;
+    }
+
+
+    /* HIDE MENU */
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 50px;
+        right: 0;
+
+        width: 220px;
+
+        padding: 12px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 4px;
+
+        background: rgba(15, 30, 45, 0.98);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(255,255,255,0.15);
+
+        border-radius: 12px;
+
+        box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+    }
+
+
+    /* OPEN MENU */
+
+    .nav-menu.active {
+        display: flex;
+        width: 450px;
+    }
+
+
+    /* MOBILE LINKS */
+
+    .nav-menu > a,
+    .dropbtn {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 14px;
+
+        color: #ffffff;
+
+        font-size: 15px;
+
+        text-align: center;
+
+        border-radius: 8px;
+    }
+
+    .nav-menu > a:hover,
+    .dropbtn:hover {
+        background: rgba(43,124,255,0.15);
+
+        color: #2b7cff;
+    }
+
+
+    /* =====================================================
+       MOBILE DROPDOWN
+    ===================================================== */
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+
+        min-width: 100%;
+
+        margin-top: 4px;
+
+        background: #ffffff;
+
+        border-radius: 8px;
+
+        box-shadow: none;
+    }
+
+
+    /*
+       IMPORTANT:
+       On mobile, hover should NOT open dropdown.
+    */
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    /* .dropdown.active .dropdown-content {
+        display: block;
+    } */
+
+    .dropdown-content a {
+        color: #74d3ff;
+        font-size: 14px;
+        padding: 10px 14px;
+        background-color:#32475f;
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background: #eeeeee;
+    }
+
+
+    /* =====================================================
+       HAMBURGER ANIMATION
+    ===================================================== */
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .nav {
+        top: 12px;
+        right: 12px;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger span {
+        width: 26px;
+        height: 3px;
+    }
+
+    .nav-menu {
+        top: 48px;
+
+        width: 200px;
+
+        padding: 10px;
+    }
+
+    .nav-menu > a,
+    .dropbtn {
+        font-size: 14px;
+
+        padding: 11px 12px;
+    }
+
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.container1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+   
+
+}
+
+.container1 img {
+    width: 100%;
+    height: 760px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.container2 h3 {
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3;
+    z-index: 5;
+}
+
+.container2 h2 {
+    position: absolute;
+
+    top: 270px;
+    left: 100px;
+
+    max-width: 900px;
+
+    color: white;
+
+    font-size: 60px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    z-index: 5;
+}
+
+.container3 p {
+    position: absolute;
+
+    top: 400px;
+    left: 100px;
+
+    max-width: 700px;
+
+    color: white;
+
+    font-size: 35px;
+
+    line-height: 1.5;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.buttons {
+    position: absolute;
+
+    top: 520px;
+    left: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    z-index: 10;
+}
+
+.btn-primary,
+.btn-secondary {
+    position: static;
+
+    padding: 15px 35px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: #2b7cff;
+
+    color: white;
+
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #0d5bd8;
+}
+
+.btn-secondary {
+    background: transparent;
+
+    color: white;
+
+    border: 2px solid #2b7cff;
+}
+
+.btn-secondary:hover {
+    background: #2b7cff;
+
+    color: white;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    position: absolute;
+
+    bottom: -225px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    z-index: 100;
+}
+
+.feature-card {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    background:
+        rgba(8, 22, 40, 0.55);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.feature-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 35px;
+
+    position: relative;
+
+    transition: 0.35s;
+
+    min-width: 0;
+}
+
+.feature-box:not(:last-child) {
+    border-right:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+.feature-box:hover {
+    background:
+        rgba(255, 255, 255, 0.06);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.icon img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    filter:
+        brightness(0) invert(1);
+
+    opacity: 0.95;
+
+    transition: 0.4s;
+}
+
+.feature-box:hover .icon img {
+    transform:
+        scale(1.1) rotate(-8deg);
+}
+
+.content {
+    min-width: 0;
+}
+
+.content h3 {
+    color: #fff;
+
+    font-size: 24px;
+
+    line-height: 1.3;
+
+    margin-bottom: 10px;
+
+    font-weight: 700;
+}
+
+.content p {
+    color: #d7d7d7;
+
+    line-height: 1.6;
+
+    font-size: 16px;
+}
+
+.feature-box::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #2d9cff;
+
+    transition: 0.4s;
+}
+
+.feature-box:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+    width: 100%;
+
+    background: #1f2b38;
+
+    padding: 300px 8% 100px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.contact-left h5 {
+    color: #2b7cff;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.contact-left h2 {
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.contact-left > p {
+    color: white;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-width: 0;
+}
+
+.info-box img {
+    width: 55px;
+    height: 55px;
+
+    padding: 12px;
+
+    background: #2b7cff;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.info-box h4 {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #fff;
+}
+
+.info-box p {
+    margin: 4px 0 0;
+
+    color: #dbd6d6;
+
+    font-size: 16px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-right {
+    width: 100%;
+
+    background: #1d2e40;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+
+    border:
+        1px solid #1565d8;
+}
+
+.contact-right form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 16px;
+
+    border:
+        1px solid #1e4063;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: #1f2b38;
+
+    color: white;
+
+    resize: vertical;
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+    color: #aeb8c3;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+    border-color: #2b7cff;
+}
+
+.contact-right button {
+    width: 100%;
+
+    background: #2b7cff;
+
+    color: #fff;
+
+    border: none;
+
+    padding: 16px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-right button:hover {
+    background: #1565d8;
+}
+
+
+/* =========================================================
+   1400px - 1600px
+========================================================= */
+
+@media (max-width: 1600px) {
+
+    .container2 h2 {
+        left: 80px;
+
+        font-size: 48px;
+    }
+
+    .container2 h3 {
+        left: 80px;
+
+        font-size: 28px;
+    }
+
+    .container3 p {
+        left: 80px;
+
+        font-size: 18px;
+    }
+
+    .buttons {
+        left: 80px;
+    }
+
+    .features {
+        width: 92%;
+    }
+
+}
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    header {
+        left: 35px;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    nav {
+        right: 35px;
+
+        gap: 25px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 16px;
+    }
+
+    .container1 img {
+        height: 700px;
+    }
+
+    .container2 h3 {
+        top: 210px;
+
+        left: 55px;
+
+        font-size: 25px;
+    }
+
+    .container2 h2 {
+        top: 260px;
+
+        left: 55px;
+
+        max-width: 750px;
+
+        font-size: 42px;
+
+        line-height: 1.25;
+    }
+
+    .container3 p {
+        top: 390px;
+
+        left: 55px;
+
+        font-size: 17px;
+    }
+
+    .buttons {
+        top: 490px;
+
+        left: 55px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 13px 28px;
+
+        font-size: 16px;
+    }
+
+    .feature-card {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .feature-box:nth-child(1),
+    .feature-box:nth-child(2) {
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .contact-section {
+        padding-top: 250px;
+    }
+
+}
+
+
+/* =========================================================
+   992px
+========================================================= */
+
+@media (max-width: 992px) {
+
+    header {
+        left: 25px;
+        top: 18px;
+    }
+
+    header img {
+        width: 130px;
+    }
+
+    nav {
+        top: 22px;
+
+        right: 25px;
+
+        gap: 18px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 15px;
+    }
+
+    .container1 img {
+        height: 680px;
+    }
+
+    .container2 h3 {
+        top: 190px;
+
+        left: 40px;
+
+        font-size: 23px;
+    }
+
+    .container2 h2 {
+        top: 235px;
+
+        left: 40px;
+
+        max-width: 650px;
+
+        font-size: 37px;
+
+        line-height: 1.25;
+    }
+
+    .container3 p {
+        top: 355px;
+
+        left: 40px;
+
+        max-width: 560px;
+
+        font-size: 16px;
+    }
+
+    .buttons {
+        top: 455px;
+
+        left: 40px;
+
+        gap: 15px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 13px 24px;
+
+        font-size: 15px;
+    }
+
+    .features {
+        bottom: -160px;
+
+        width: 92%;
+    }
+
+    .feature-box {
+        padding: 25px 20px;
+
+        gap: 15px;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .contact-section {
+        padding:
+            230px 5% 80px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-left h2 {
+        font-size: 38px;
+    }
+
+    .contact-info {
+        max-width: 500px;
+
+        margin: auto;
+
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   768px — MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    header {
+        top: 15px;
+
+        left: 15px;
+    }
+
+    header img {
+        width: 105px;
+    }
+
+
+    /* NAV */
+
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: calc(100% - 140px);
+        gap: 8px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+}
+
+    nav a,
+    .dropbtn {
+        font-size: 15px;
+
+        padding: 5px -1px;
+    }
+    .dropdown.active .dropdown-content {
+    display: block;
+}
+
+
+    /* HERO */
+
+    .container1 img {
+        width: 100%;
+
+        height: 680px;
+
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+    .container2 h3 {
+        top: 145px;
+
+        left: 20px;
+
+        right: 20px;
+
+        font-size: 20px;
+    }
+
+    .container2 h2 {
+        top: 185px;
+
+        left: 20px;
+
+        right: 20px;
+
+        max-width: none;
+
+        font-size: 31px;
+
+        line-height: 1.3;
+    }
+
+    .container3 p {
+        top: 295px;
+
+        left: 20px;
+
+        right: 20px;
+
+        max-width: none;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    /* BUTTONS */
+
+    .buttons {
+        top: 405px;
+
+        left: 20px;
+
+        width:
+            calc(100% - 40px);
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        padding: 13px 20px;
+        font-size: 15px;
+        position: relative;
+        top:10px;
+    }
+
+
+    /* FEATURES */
+
+    .features {
+        position: relative;
+
+        bottom: auto;
+
+        left: auto;
+
+        transform: none;
+
+        width:
+            calc(100% - 30px);
+
+        margin:
+            -45px auto 40px;
+    }
+
+    .feature-card {
+        grid-template-columns: 1fr;
+
+        border-radius: 15px;
+    }
+
+    .feature-box {
+        width: 100%;
+
+        border-right: none !important;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.12);
+
+        padding: 25px 20px;
+    }
+
+    .feature-box:last-child {
+        border-bottom: none;
+    }
+
+    .icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .icon img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .content h3 {
+        font-size: 19px;
+    }
+
+    .content p {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding:
+            65px 20px 60px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-left h5 {
+        font-size: 15px;
+    }
+
+    .contact-left h2 {
+        font-size: 30px;
+
+        line-height: 1.3;
+    }
+
+    .contact-left > p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .contact-info {
+        width: 100%;
+
+        max-width: 450px;
+
+        margin: auto;
+
+        text-align: left;
+    }
+
+    .info-box {
+        gap: 14px;
+    }
+
+    .info-box img {
+        width: 50px;
+        height: 50px;
+
+        padding: 10px;
+    }
+
+    .info-box h4 {
+        font-size: 17px;
+    }
+
+    .info-box p {
+        font-size: 14px;
+    }
+
+    .contact-right {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   480px — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* HEADER */
+
+    header {
+        top: 12px;
+
+        left: 12px;
+    }
+
+    header img {
+        width: 85px;
+    }
+
+
+    /* NAV */
+
+    nav {
+        top: 15px;
+
+        right: 10px;
+
+        width:
+            calc(100% - 115px);
+
+        gap: 6px;
+
+        justify-content: flex-end;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 11px;
+
+        padding: 3px 0;
+    }
+
+    .dropdown-content {
+        min-width: 120px;
+    }
+
+    .dropdown-content a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+
+    /* HERO */
+
+    .container1 img {
+        height: 680px;
+
+        object-fit: cover;
+    }
+
+    .container2 h3 {
+        top: 145px;
+
+        left: 15px;
+
+        right: 15px;
+
+        font-size: 17px;
+    }
+
+    .container2 h2 {
+        top: 185px;
+
+        left: 15px;
+
+        right: 15px;
+
+        font-size: 25px;
+
+        line-height: 1.35;
+    }
+
+    .container3 p {
+        top: 295px;
+
+        left: 15px;
+
+        right: 15px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* BUTTONS */
+
+    .buttons {
+        top: 405px;
+
+        left: 15px;
+
+        width:
+            calc(100% - 30px);
+
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 12px 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* FEATURES */
+
+    .features {
+        width:
+            calc(100% - 24px);
+
+        margin:
+            -35px auto 30px;
+    }
+
+    .feature-card {
+        border-radius: 13px;
+    }
+
+    .feature-box {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 24px 15px;
+    }
+
+    .icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .content h3 {
+        font-size: 18px;
+
+        margin-bottom: 7px;
+    }
+
+    .content p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        padding:
+            55px 15px 45px;
+    }
+
+    .contact-left h5 {
+        font-size: 13px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .contact-left h2 {
+        font-size: 25px;
+
+        line-height: 1.3;
+    }
+
+    .contact-left > p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .contact-info {
+        gap: 17px;
+    }
+
+    .info-box {
+        gap: 11px;
+    }
+
+    .info-box img {
+        width: 45px;
+        height: 45px;
+
+        padding: 9px;
+    }
+
+    .info-box h4 {
+        font-size: 15px;
+    }
+
+    .info-box p {
+        font-size: 12px;
+    }
+
+    .contact-right {
+        padding: 18px;
+
+        border-radius: 13px;
+    }
+
+    .contact-right form {
+        gap: 13px;
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        padding: 13px;
+
+        font-size: 13px;
+    }
+
+    .contact-right button {
+        padding: 13px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   360px — VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    header img {
+        width: 78px;
+    }
+
+    nav {
+        width:
+            calc(100% - 105px);
+
+        gap: 5px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 10px;
+    }
+
+    .container1 img {
+        height: 670px;
+    }
+
+    .container2 h3 {
+        top: 140px;
+
+        font-size: 16px;
+    }
+
+    .container2 h2 {
+        top: 180px;
+
+        font-size: 23px;
+
+        line-height: 1.35;
+    }
+
+    .container3 p {
+        top: 285px;
+
+        font-size: 12px;
+    }
+
+    .buttons {
+        top: 395px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 11px;
+
+        font-size: 12px;
+    }
+
+    .feature-box {
+        padding:
+            22px 12px;
+    }
+
+    .content h3 {
+        font-size: 17px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .contact-left h2 {
+        font-size: 23px;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 500px) and (max-width: 900px) {
+
+    .container1 img {
+        height: 600px;
+    }
+
+    .container2 h3 {
+        top: 115px;
+    }
+
+    .container2 h2 {
+        top: 155px;
+       
+
+        font-size: 28px;
+    }
+
+    .container3 p {
+        top: 245px;
+    }
+
+    .buttons {
+        top: 345px;
+    }
+
+}
+
+</style>
+</html>
