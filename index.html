@@ -229,9 +229,6 @@ navMenu.querySelectorAll("a").forEach(function (link) {
 /* =========================================================
    RESET
 ========================================================= */
-/* =========================================================
-   RESET
-========================================================= */
 
 * {
     margin: 0;
@@ -306,7 +303,7 @@ header img {
     color: #fff;
     text-decoration: none;
 
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 500;
 
     background: transparent;
@@ -389,7 +386,6 @@ header img {
     .dropdown.active .dropdown-content {
         display: block;
     }
-
 }
 
 
@@ -923,7 +919,9 @@ header img {
 
 /* =========================================================
    LARGE DESKTOP
-   1600px AND ABOVE
+   1920px+
+   
+   FONT SIZES KEPT FROM YOUR CODE
 ========================================================= */
 
 @media (min-width: 1600px) {
@@ -1007,16 +1005,24 @@ header img {
 /* =========================================================
    LAPTOP
    1366px - 1599px
+
+   1440px IS HERE
 ========================================================= */
 
 @media (min-width: 1366px) and (max-width: 1599px) {
 
     header {
         left: 60px;
+        top: 25px;
+    }
+
+    header img {
+        width: 180px;
     }
 
     .nav {
         right: 65px;
+        top: 32px;
     }
 
     .nav-menu {
@@ -1071,7 +1077,7 @@ header img {
 
 
 /* =========================================================
-   LAPTOP
+   LAPTOP / SMALL DESKTOP
    1200px - 1365px
 ========================================================= */
 
@@ -1169,7 +1175,7 @@ header img {
 
 
 /* =========================================================
-   SMALL LAPTOP / TABLET
+   SMALL LAPTOP
    993px - 1199px
 ========================================================= */
 
@@ -1415,11 +1421,220 @@ header img {
 
 
 /* =========================================================
-   MOBILE BASE
-   768px AND BELOW
+   768px TABLET
+   EXACTLY SUPPORTS 768 × 1024
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (min-width: 600px) and (max-width: 768px) {
+
+    header {
+        top: 18px;
+        left: 25px;
+    }
+
+    header img {
+        width: 125px;
+    }
+
+    .nav {
+        top: 15px;
+        right: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 52px;
+        right: 0;
+
+        width: 300px;
+        max-width: calc(100vw - 40px);
+
+        padding: 10px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 4px;
+
+        background: rgba(15, 30, 45, 0.98);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(255,255,255,0.15);
+
+        border-radius: 12px;
+
+        box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+
+        overflow: visible;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu > a,
+    .dropbtn {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 14px;
+
+        color: #fff;
+
+        font-size: 15px;
+
+        text-align: center;
+
+        border-radius: 8px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+        min-width: 100%;
+
+        margin-top: 4px;
+
+        background: #32475f;
+
+        border-radius: 8px;
+
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        width: 100%;
+
+        padding: 10px 14px;
+
+        color: #fff;
+
+        background: #32475f;
+
+        text-align: center;
+
+        font-size: 14px;
+    }
+
+    .container1 img {
+        height: 650px;
+    }
+
+    .container2 h3 {
+        top: 175px;
+        left: 35px;
+        font-size: 21px;
+    }
+
+    .container2 h2 {
+        top: 215px;
+        left: 35px;
+        font-size: 34px;
+        max-width: 580px;
+    }
+
+    .container3 p {
+        top: 330px;
+        left: 35px;
+        font-size: 14px;
+        max-width: 500px;
+    }
+
+    .buttons {
+        top: 420px;
+        left: 35px;
+        gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 11px 20px;
+        font-size: 14px;
+    }
+
+    .features {
+        position: relative;
+
+        bottom: auto;
+        left: auto;
+
+        transform: none;
+
+        width: calc(100% - 50px);
+
+        margin: -55px auto 45px;
+    }
+
+    .feature-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-box {
+        padding: 25px 18px;
+        gap: 14px;
+    }
+
+    .feature-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .feature-box:nth-child(1),
+    .feature-box:nth-child(2) {
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .contact-section {
+        padding: 70px 40px 70px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-info {
+        max-width: 500px;
+        margin: auto;
+        text-align: left;
+    }
+}
+
+
+/* =========================================================
+   MOBILE BASE
+   599px AND BELOW
+========================================================= */
+
+@media (max-width: 599px) {
 
     /* HEADER */
 
@@ -1789,11 +2004,11 @@ header img {
 
 
 /* =========================================================
-   S25 ULTRA / LARGE MOBILE
-   391px - 412px
+   430px LARGE MOBILE
+   413px - 599px
 ========================================================= */
 
-@media (min-width: 391px) and (max-width: 412px) {
+@media (min-width: 413px) and (max-width: 599px) {
 
     header {
         top: 13px;
@@ -1991,11 +2206,11 @@ header img {
 
 
 /* =========================================================
-   STANDARD MOBILE
-   376px - 390px
+   390px MOBILE
+   376px - 412px
 ========================================================= */
 
-@media (min-width: 376px) and (max-width: 390px) {
+@media (min-width: 376px) and (max-width: 412px) {
 
     header {
         top: 12px;
@@ -2137,7 +2352,7 @@ header img {
 
 
 /* =========================================================
-   SMALL MOBILE
+   375px EXACT MOBILE
    361px - 375px
 ========================================================= */
 
@@ -2263,6 +2478,10 @@ header img {
 
     /* CONTACT */
 
+    .contact-section {
+        padding: 50px 15px 45px;
+    }
+
     .contact-left h2 {
         font-size: 23px;
     }
@@ -2274,7 +2493,7 @@ header img {
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   VERY SMALL MOBILE
    360px AND BELOW
 ========================================================= */
 
@@ -2506,5 +2725,7 @@ header img {
         top: 320px;
     }
 }
+
+
 </style>
 </html>
