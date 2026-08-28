@@ -217,6 +217,120 @@ function scrollGallery(distance) {
     
 // }
 
+function scrollGallery(distance) {
+
+    document.getElementById("gallery").scrollBy({
+        left: distance,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", function () {
+
+    menuToggle.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* =========================================================
+   MOBILE PRODUCTS DROPDOWN
+   ========================================================= */
+
+const mobileProductBtn =
+    document.getElementById("mobileProductBtn");
+
+const mobileProductMenu =
+    document.getElementById("mobileProductMenu");
+
+
+mobileProductBtn.addEventListener("click", function (e) {
+
+    e.stopPropagation();
+
+    mobileProductBtn.classList.toggle("active");
+
+    mobileProductMenu.classList.toggle("active");
+
+});
+
+
+/* =========================================================
+   CLOSE MOBILE MENU WHEN LINK IS CLICKED
+   ========================================================= */
+
+const mobileLinks =
+    document.querySelectorAll(
+        ".mobile-menu > a, .mobile-dropdown-content a"
+    );
+
+mobileLinks.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        menuToggle.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   CLOSE MENU WHEN CLICKING OUTSIDE
+   ========================================================= */
+
+document.addEventListener("click", function(e) {
+
+    if (
+        !mobileMenu.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ) {
+
+        menuToggle.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+        mobileProductBtn.classList.remove("active");
+
+        mobileProductMenu.classList.remove("active");
+
+    }
+
+});
+
+
+/* =========================================================
+   RESET MOBILE MENU WHEN RESIZING TO DESKTOP
+   ========================================================= */
+
+window.addEventListener("resize", function() {
+
+    if (window.innerWidth > 768) {
+
+        menuToggle.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+        mobileProductBtn.classList.remove("active");
+
+        mobileProductMenu.classList.remove("active");
+
+    }
+
+});
+
 
 
 </script>
