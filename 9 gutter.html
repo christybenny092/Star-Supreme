@@ -2471,5 +2471,137 @@ h2{
     cursor: pointer;
 }
 
+
+/* =========================================================
+   PRODUCTS DROPDOWN FIX - 1569px
+   ========================================================= */
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 180px;
+    width: max-content;
+    background: #243241;
+    border-radius: 10px;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 99999;
+
+    /* hidden by default */
+    display: none;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Hover */
+.dropdown-content a:hover {
+    background: #32475f;
+    color: #74d3ff;
+}
+
+/* Keep dropdown open while hovering Products or menu */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* =========================================================
+   1569px DROPDOWN
+   ========================================================= */
+
+@media (min-width: 1401px) and (max-width: 1569px) {
+
+    .header {
+        z-index: 10000;
+    }
+
+    .nav {
+        position: relative;
+        z-index: 10001;
+    }
+
+    .nav-links {
+        position: relative;
+        z-index: 10002;
+    }
+
+    .dropdown {
+        position: relative;
+        z-index: 10003;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+
+        min-width: 180px;
+        width: 180px;
+
+        background: #243241;
+        border-radius: 10px;
+
+        padding: 8px 0;
+
+        z-index: 99999;
+        display: none;
+
+        box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 12px 18px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}
+
+
+/* =========================================================
+   1550px - 1569px
+   ========================================================= */
+
+@media (min-width: 1550px) and (max-width: 1569px) {
+
+    .dropdown-content {
+        top: calc(100% + 8px);
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 180px;
+        width: 180px;
+    }
+
+    .dropdown-content a {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+}
+
 </style>
 </html>
