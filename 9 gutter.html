@@ -21,23 +21,41 @@
 <body>
 
      <div class="header">
-<div class="header-left"><img src="./images/Picsart_26-07-21_16-54-11-199.png" alt="Logo" class="logo-img"></div>
-<div class="header-right"><nav class="nav">
-    <div class="nav-links">
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./gallery.html">Gallery</a>
 
-        <div class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Products </a>
-            <div class="dropdown-content">
-                <a href="6 gutter.html">6 Gutter</a>
-                <a href="9 gutter.html">9 Gutter</a>
-            </div>
-        </div>
-        <a href="./contact.html">Contact</a>
+    <div class="header-left">
+        <img src="./images/Picsart_26-07-21_16-54-11-199.png"
+             alt="Logo"
+             class="logo-img">
     </div>
-</nav></div>
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="header-right" id="mobileMenu">
+        <nav class="nav">
+            <div class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./gallery.html">Gallery</a>
+
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Products</a>
+
+                    <div class="dropdown-content">
+                        <a href="6 gutter.html">6 Gutter</a>
+                        <a href="9 gutter.html">9 Gutter</a>
+                    </div>
+                </div>
+
+                <a href="./contact.html">Contact</a>
+            </div>
+        </nav>
+    </div>
+
 </div>
     
 
@@ -254,17 +272,23 @@ function scrollGallery(distance) {
     });
 }
 
-// function showFittings() {
-//     const gallery = document.getElementById("gallery");
-
-//     gallery.scrollTo({
-//         left: gallery.scrollWidth,
-//         behavior: "smooth"
-//     });
-    
-// }
 
 
+function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const button = document.querySelector(".menu-toggle");
+
+    menu.classList.toggle("active");
+    button.classList.toggle("active");
+}
+
+
+function scrollGallery(distance) {
+    document.getElementById("gallery").scrollBy({
+        left: distance,
+        behavior: "smooth"
+    });
+}
 
 </script>
 </body>
@@ -3253,7 +3277,329 @@ body {
         padding: 14px;
     }
 }
+/* =========================================================
+   HAMBURGER MENU
+========================================================= */
 
+/* Hidden on desktop */
+.menu-toggle {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE HAMBURGER
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 65px;
+        min-height: 65px;
+
+        padding: 0 15px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        z-index: 3000;
+    }
+
+    /* Logo */
+    .header-left {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .logo-img {
+        width: 105px;
+        height: auto;
+    }
+
+
+    /* =========================
+       HAMBURGER BUTTON
+    ========================= */
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 5px;
+
+        background: transparent;
+        border: none;
+
+        cursor: pointer;
+
+        padding: 0;
+
+        z-index: 4000;
+    }
+
+    .menu-toggle span {
+        display: block;
+
+        width: 26px;
+        height: 3px;
+
+        background: #ffffff;
+
+        border-radius: 3px;
+
+        transition: all 0.3s ease;
+    }
+
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+
+    .header-right {
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        background: rgba(31, 43, 56, 0.98);
+
+        backdrop-filter: blur(10px);
+
+        padding: 15px 20px 20px;
+
+        box-shadow: 0 10px 25px rgba(0,0,0,.3);
+    }
+
+    /* Show menu */
+    .header-right.active {
+        display: block;
+    }
+
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+    }
+
+
+    /* Menu links */
+
+    .nav-links > a,
+    .nav-links .dropbtn {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 10px;
+
+        text-align: center;
+
+        color: #ffffff;
+
+        font-size: 14px;
+
+        text-decoration: none;
+    }
+
+    .nav-links > a:hover,
+    .nav-links .dropbtn:hover {
+        color: #74d3ff;
+    }
+
+
+    /* =========================
+       PRODUCTS DROPDOWN
+    ========================= */
+
+    .dropdown {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        position: static;
+
+        width: 100%;
+        min-width: 100%;
+
+        transform: none;
+
+        background: #243241;
+
+        border-radius: 8px;
+
+        padding: 5px 0;
+
+        box-shadow: none;
+
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        display: block;
+
+        width: 100%;
+
+        padding: 10px;
+
+        text-align: center;
+
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       HAMBURGER → X
+    ========================= */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+
+/* =========================================================
+   576px
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .header {
+        height: 60px;
+        min-height: 60px;
+
+        padding: 0 12px;
+    }
+
+    .header-right {
+        top: 60px;
+    }
+
+    .logo-img {
+        width: 95px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        height: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   430px
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .header {
+        height: 58px;
+        min-height: 58px;
+
+        padding: 0 10px;
+    }
+
+    .header-right {
+        top: 58px;
+    }
+
+    .logo-img {
+        width: 90px;
+    }
+
+}
+
+
+/* =========================================================
+   390px
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .header {
+        padding: 0 8px;
+    }
+
+    .logo-img {
+        width: 85px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-toggle span {
+        width: 23px;
+    }
+
+}
+
+
+/* =========================================================
+   375px
+========================================================= */
+
+@media (max-width: 375px) {
+
+    .header {
+        padding: 0 7px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+
+}
 
 </style>
 </html>
