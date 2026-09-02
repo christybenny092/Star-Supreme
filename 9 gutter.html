@@ -543,35 +543,20 @@ body {
    PRODUCT GALLERY
 ========================================= */
 
-/* Hide all scrollbars */
-html,
-body {
-    overflow-x: hidden;
-}
-
-/* Hide gallery horizontal scrollbar */
 .gallery-container {
     overflow-x: auto;
+    display: flex;
+    gap: 17px;
+    scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    white-space: nowrap;
+    flex: 1;
+    padding: 10px 5px 20px;
 }
 
 .gallery-container::-webkit-scrollbar {
     display: none;
-    width: 0;
-    height: 0;
-}
-
-/* Hide product grid scrollbar */
-.product-grid {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.product-grid::-webkit-scrollbar {
-    display: none;
-    width: 0;
-    height: 0;
 }
 
 
@@ -759,6 +744,25 @@ body {
 
 .right{
     right:44px;
+}
+
+
+    .gallery-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb:hover {
+    background: #333;
 }
 
    .gallery-item{
