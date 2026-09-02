@@ -292,6 +292,10 @@ function scrollGallery(distance) {
     z-index: 1000;
 }
 
+    body{
+    overflow-x:hidden;
+}
+
 .header-left{
     display: flex;
     align-items: center;
@@ -747,23 +751,7 @@ body {
 }
 
 
-    .gallery-container::-webkit-scrollbar {
-    height: 10px;
-}
 
-.gallery-container::-webkit-scrollbar-track {
-    background: #ddd;
-    border-radius: 10px;
-}
-
-.gallery-container::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 10px;
-}
-
-.gallery-container::-webkit-scrollbar-thumb:hover {
-    background: #333;
-}
 
    .gallery-item{
     flex: 0 0 auto;
