@@ -3548,44 +3548,49 @@ img {
    GALLERY - 1920px FIX
    ========================= */
 
+/* =========================
+   GALLERY - 1920px FIX
+   ========================= */
+
 .gallery-wrapper {
     width: 100%;
-    max-width: 1650px;
+    max-width: 1750px;
     margin: 0 auto;
 }
 
 .gallery-container {
     width: 100%;
-    padding: 20px 10px 30px;
-    gap: 24px;
+    padding: 25px 15px 35px;
+    gap: 30px;
     align-items: flex-start;
 }
 
-/* Fittings card */
+/* Bigger fitting card */
 .gallery-item {
-    width: 210px;
-    min-width: 210px;
-    flex: 0 0 210px;
+    width: 250px;
+    min-width: 250px;
+    flex: 0 0 250px;
     margin: 0;
 }
 
-/* Image box */
+/* Bigger image box */
 .gallery-image {
-    width: 210px;
-    height: 250px;
-    padding: 18px;
+    width: 250px;
+    height: 350px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
-/* Fittings image */
-.gallery-item img {
+/* Image inside box */
+.gallery-image img {
     width: auto;
-    max-width: 78%;
+    max-width: 82%;
     height: auto;
-    max-height: 205px;
+    max-height: 240px;
     object-fit: contain;
     object-position: center;
     border-radius: 12px;
@@ -3594,7 +3599,7 @@ img {
 /* Product name */
 .gallery-item p {
     width: 100%;
-    margin-top: 13px;
+    margin-top: 14px;
     font-size: 14px;
     line-height: 1.5;
     text-align: center;
